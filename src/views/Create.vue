@@ -1,12 +1,16 @@
 <template>
 <div>
   <h1>Add New Journal Entry</h1>
-  <form v-if="creating" @submit.prevent="addTicket">
+  <form v-if="creating" @submit.prevent="addEntry">
     <input v-model="title" placeholder="Title">
     <p></p>
     <textarea v-model="problem" placeholder="Type your journal entry here..."></textarea>
+
     <br />
-    <button type="submit">Submit</button>
+
+    <button type="submit">Add to Journal</button><br>
+
+
   </form>
   <div v-else>
     <p>Journal entry added successfully!</p>
@@ -29,12 +33,13 @@ export default {
     toggleForm() {
       this.creating = !this.creating;
     },
-    addTicket() {
-      this.$root.$data.addTicket(this.title, this.problem);
+    addEntry() {
+      this.$root.$data.addEntry(this.title, this.problem, true);
       this.title = "";
       this.problem = "";
       this.creating = false;
     },
+
   }
 }
 </script>
@@ -57,4 +62,6 @@ button {
   margin-top: 20px;
   font-size: 1.2em;
 }
+
+
 </style>

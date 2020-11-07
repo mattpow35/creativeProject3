@@ -2,7 +2,7 @@
 <div>
   <div class="ticket">
   <h1>Public Journal Entries</h1>
-    <div class="product" v-for="product in products" :key="product.id">
+    <div class="product" v-for="product in products.slice().reverse()" :key="product.id">
     <hr>
       <div class="problem">
         <h1>{{product.name}}</h1>

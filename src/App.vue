@@ -1,11 +1,11 @@
 <template>
 <div id="app">
   <div class="header">
-    <h1>Journal</h1>
+    <h1>Journal Sharing</h1>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">My Journal</router-link> |
       <router-link to="/create">New Journal Entry</router-link> |
-      <router-link to="/public">Public Journal Entries</router-link>
+      <router-link to="/public">Public Journal</router-link>
     </div>
   </div>
   <div class="content">
@@ -28,7 +28,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  background: #571845;
+  background: #D2B48C;
   padding: 10px 100px;
   color: white;
 }

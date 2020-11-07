@@ -13,15 +13,25 @@ let data = {
   getEntries() {
     return this.entries;
   },
-  addEntry(name, problem) {
+  addEntry(name, problem, isPublic) {
     var d = new Date()
 
     this.entries.push({
       id: this.currentID,
       title: name,
       problem: problem,
-      date: d.toDateString()
+      date: d.toDateString(),
+      public: isPublic,
     });
+    if (isPublic) {
+      this.publicPosts.push({
+        id: this.currentId + 10,
+        name: "Me",
+        title: name,
+        message: problem,
+        date: d.toDateString(),
+      });
+    }
     this.currentID += 1;
   }
 }

@@ -1,13 +1,13 @@
 <template>
 <div>
-  <h1>Journal Entries</h1>
+  <h1>My Journal</h1>
   <div v-if="this.$root.$data.entries.length === 0">
     <hr/>
     <div class="problem">
       <p>You currently have no journal entries.</p>
     </div>
   </div>
-  <div v-for="entry in entries" v-bind:key="entry.id">
+  <div v-for="entry in entries.slice().reverse()" v-bind:key="entry.id">
     <hr/>
     <div class="ticket">
       <div class="problem">
