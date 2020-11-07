@@ -2,23 +2,23 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 
+
 Vue.config.productionTip = false;
 
 let data = {
-  currentID: 2,
-  tickets: [{
-    id: 1,
-    problem: 'This app is not completely written yet.',
-    name: 'Emma'
-  }],
+  currentID: 0,
+  tickets: [],
   getTickets() {
     return this.tickets;
   },
   addTicket(name, problem) {
+    var d = new Date()
+    
     this.tickets.push({
       id: this.currentID,
-      name: name,
-      problem: problem
+      title: name,
+      problem: problem,
+      date: d.toDateString()
     });
     this.currentID += 1;
   }

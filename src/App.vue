@@ -4,7 +4,7 @@
     <h1>Journal</h1>
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/create">New Journal Entry</router-link>
     </div>
   </div>
   <div class="content">
