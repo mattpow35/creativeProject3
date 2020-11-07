@@ -28,7 +28,7 @@ export default {
     products: Array
   },
 
-  
+
 }
 
 
@@ -36,12 +36,6 @@ export default {
 </script>
 
 <style scoped>
-
-
-
-
-
-
 
 .auto {
   margin-left: auto;
