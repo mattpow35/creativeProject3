@@ -1,20 +1,22 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
+import mock from './mock-data.js'
 
 
 Vue.config.productionTip = false;
 
 let data = {
+  publicPosts: mock,
   currentID: 0,
-  tickets: [],
-  getTickets() {
-    return this.tickets;
+  entries: [],
+  getEntries() {
+    return this.entries;
   },
-  addTicket(name, problem) {
+  addEntry(name, problem) {
     var d = new Date()
-    
-    this.tickets.push({
+
+    this.entries.push({
       id: this.currentID,
       title: name,
       problem: problem,

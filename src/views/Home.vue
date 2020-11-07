@@ -1,20 +1,20 @@
 <template>
 <div>
   <h1>Journal Entries</h1>
-  <div v-if="this.$root.$data.tickets.length === 0">
+  <div v-if="this.$root.$data.entries.length === 0">
     <hr/>
     <div class="problem">
       <p>You currently have no journal entries.</p>
     </div>
   </div>
-  <div v-for="ticket in tickets" v-bind:key="ticket.id">
+  <div v-for="entry in entries" v-bind:key="entry.id">
     <hr/>
     <div class="ticket">
       <div class="problem">
 
-        <p><b>{{ticket.title}}</b></p>
-        <p><i>{{ticket.date}}</i></p>
-        <p>{{ticket.problem}}</p>
+        <p><b>{{entry.title}}</b></p>
+        <p><i>{{entry.date}}</i></p>
+        <p>{{entry.problem}}</p>
 
       </div>
     </div>
@@ -30,8 +30,8 @@ export default {
     return {}
   },
   computed: {
-    tickets() {
-      return this.$root.$data.getTickets();
+    entries() {
+      return this.$root.$data.getEntries();
     }
   }
 }
