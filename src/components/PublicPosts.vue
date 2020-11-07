@@ -28,13 +28,7 @@ export default {
     products: Array
   },
 
-  methods: {
-    addToCart(product) {
-
-      this.$root.$data.cart.push(product)
-    }
-  },
-
+  
 }
 
 
